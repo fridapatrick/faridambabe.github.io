@@ -2,70 +2,148 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web Designer Portfolio</title>
+    <title>Farida Mbabe | Frontend Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f5f7fa;
             color: #333;
+            line-height: 1.6;
         }
+
+        /* ---------- HEADER ---------- */
         header {
-            background: #0a2540;
+            background: linear-gradient(135deg, #0a2540, #163b66);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 40px;
         }
+
         header p {
             font-size: 18px;
             margin-top: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #0a2540;
-            margin-bottom: 15px;
-        }
-        .skills span {
+
+        header .cta {
+            margin-top: 25px;
             display: inline-block;
-            background: #e6ecf3;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 5px;
-            font-size: 14px;
+            padding: 12px 24px;
+            background: white;
+            color: #0a2540;
+            border-radius: 6px;
+            font-weight: bold;
         }
+
+        /* ---------- SECTIONS ---------- */
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            color: #0a2540;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* ---------- SKILLS ---------- */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            background: #e6ecf3;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* ---------- PROJECTS ---------- */
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
+
         .project {
-            background: #f0f2f5;
-            padding: 15px;
-            border-radius: 6px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
         }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin-top: 0;
+            color: #0a2540;
+        }
+
+        .project-content p {
+            font-size: 14px;
+        }
+
+        .project-links a {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        /* ---------- CONTACT ---------- */
+        .contact p {
+            margin: 8px 0;
+        }
+
+        a {
+            color: #0a2540;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ---------- FOOTER ---------- */
         footer {
             text-align: center;
             padding: 30px;
             color: #777;
             font-size: 14px;
-        }
-        a {
-            color: #0a2540;
-            text-decoration: none;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -74,57 +152,105 @@
 
 <header>
     <h1>Farida Mbabe</h1>
-    <p>Web Designer | Fullstack web Developer</p>
+    <p>
+        Frontend Developer building responsive, user-friendly, and modern web interfaces
+        using HTML, CSS, and JavaScript.
+    </p>
+    <a href="#projects" class="cta">View My Work</a>
 </header>
 
 <section>
-    <h2>About Me</h2>
-    <p>
-        I am a passionate web designer specializing in clean, responsive, and user-friendly websites.
-        I help businesses and individuals create professional online presence that converts visitors into clients.
-    </p>
-</section>
-
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Nodejs</span>
-        <span>Django</span>
-        <span>Landing Pages</span>
-        <span>Website Redesign</span>
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate frontend developer focused on creating clean, responsive,
+            and accessible websites. I enjoy turning designs into functional user
+            experiences and helping individuals and small businesses build a strong
+            online presence.
+        </p>
     </div>
 </section>
 
 <section>
+    <div class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive Design</span>
+            <span>Landing Pages</span>
+            <span>Website Redesign</span>
+            <span>Git & GitHub</span>
+            <span>Node.js (Basic)</span>
+            <span>Django (Basic)</span>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
     <h2>Projects</h2>
+
     <div class="projects">
+
         <div class="project">
-            <h3>Business Website</h3>
-            <p>Modern responsive website for a small business.</p>
+            <img src="images/business-site.png" alt="Business Website Screenshot">
+            <div class="project-content">
+                <h3>Business Website</h3>
+                <p>
+                    Responsive business website with clean layout, services section,
+                    and contact form.
+                </p>
+                <div class="project-links">
+                    <a href="#">Live Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
         </div>
+
         <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>Personal portfolio design for a freelancer.</p>
+            <img src="images/portfolio.png" alt="Portfolio Screenshot">
+            <div class="project-content">
+                <h3>Portfolio Website</h3>
+                <p>
+                    Personal portfolio built to showcase frontend skills and projects.
+                </p>
+                <div class="project-links">
+                    <a href="#">Live Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
         </div>
+
         <div class="project">
-            <h3>Landing Page</h3>
-            <p>High-converting landing page for services.</p>
+            <img src="images/landing-page.png" alt="Landing Page Screenshot">
+            <div class="project-content">
+                <h3>Landing Page</h3>
+                <p>
+                    High-converting landing page focused on clarity, CTA, and usability.
+                </p>
+                <div class="project-links">
+                    <a href="#">Live Demo</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
 
 <section>
-    <h2>Contact</h2>
-    <p>Email: faridambabe1440@gmail.com</p>
-    <p>Freelancer Profile: <a href="#">fiverr.com//u/fridaemanuel</a></p>
+    <div class="card contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:faridambabe1440@gmail.com">faridambabe1440@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/fridapatrick">github.com/fridapatrick</a></p>
+        <p>Fiverr: <a href="https://www.fiverr.com/u/fridaemanuel">fiverr.com/u/fridaemanuel</a></p>
+    </div>
 </section>
 
 <footer>
-    © 2026 farida mbabe. All rights reserved.
+    © 2026 Farida Mbabe. All rights reserved.
 </footer>
 
 </body>
 </html>
-
